@@ -4,7 +4,7 @@
 
 html,
 body {
-  height: calc(var(--vh, 1vh) * 100);
+  height: calc(var(--vh, 100vh));
   @apply m-0 p-0 outline-none bg-primary-dark text-stone-300;
   -webkit-tap-highlight-color: transparent;
 }

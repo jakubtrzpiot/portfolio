@@ -11,7 +11,7 @@ const Article = () => {
   return (
     <div className="container__global gap-2 md:gap-4 flex-col">
       <Head>
-        <title>Blog | {title}</title>
+        <title>{`Blog | ${title}`}</title>
       </Head>
       <Image
         alt=""

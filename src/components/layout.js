@@ -2,19 +2,21 @@ import { useEffect } from 'react';
 import Navbar from './navbar';
 import Footer from './footer';
 
-export default function Layout({ children }) {
+const Layout = ({ children }) => {
+  const setHeight = () => {
+    document.documentElement.style.setProperty(
+      '--vh',
+      `${window.innerHeight}px`,
+    );
+  };
   useEffect(() => {
-    const setWindowHeight = () => {
-      let vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    };
+    setHeight();
     let doit;
     window.onresize = () => {
       clearTimeout(doit);
-      doit = setTimeout(setWindowHeight, 100);
+      doit = setTimeout(setHeight, 200);
     };
   }, []);
-
   return (
     <>
       <Navbar />
@@ -22,4 +24,6 @@ export default function Layout({ children }) {
       <Footer />
     </>
   );
-}
+};
+
+export default Layout;

@@ -1,14 +1,19 @@
 import Image from 'next/image';
-import image from '../../public/404.png';
 import Head from 'next/head';
 
 const FourOhFour = () => {
   return (
-    <div className="container__global flex-col justify-center items-center">
+    <div className="container__global justify-center items-center">
       <Head>
-        <title>Page Not Found | trzpiodesign</title>
+        <title>404 | Page Not Found</title>
       </Head>
-      <Image alt="" src={image} />
+      <Image
+        alt=""
+        src="/404.svg"
+        height={200}
+        width={300}
+        layout="intrinsic"
+      />
     </div>
   );
 };
