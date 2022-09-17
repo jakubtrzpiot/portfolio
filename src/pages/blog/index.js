@@ -4,7 +4,7 @@ import { articles } from '../../data';
 
 const Blog = () => {
   return (
-    <div className="padding_b container__global flex-wrap justify-between gap-3 md:gap-6">
+    <div className="padding_y container__global flex-wrap justify-between md:gap-6">
       <Head>
         <title>Blog | trzpiodesign</title>
       </Head>
