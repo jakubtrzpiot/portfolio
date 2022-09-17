@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  height: calc(var(--vh, 1vh) * 100);
+  @apply m-0 p-0 outline-none bg-primary-dark text-stone-300;
+  -webkit-tap-highlight-color: transparent;
+}
+#__next {
+  @apply h-full flex flex-col;
+}
+
+.container__global {
+  @apply h-full container flex px-3 py-3 mx-auto md:px-6;
+}
+.padding_b {
+  @apply pb-0 md:pb-3;
+}
+
+h1 {
+  @apply text-xl md:text-2xl;
+}
+
+a {
+  @apply text-lg cursor-pointer;
+}
+a:active {
+  @apply bg-none;
+}
+a.active {
+  @apply border-b-4;
+}
+
+nav > .active {
+  @apply right-0;
+}
+
+::-webkit-scrollbar {
+  @apply w-1;
+}
+::-webkit-scrollbar-thumb {
+  /* Foreground */
+  @apply bg-accent rounded-full;
+}
