@@ -8,7 +8,7 @@ const FourOhFour = () => {
       <Head>
         <title>Page Not Found | trzpiodesign</title>
       </Head>
-      <Image src={image} />
+      <Image alt="" src={image} />
     </div>
   );
 };

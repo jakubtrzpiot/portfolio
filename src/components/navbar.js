@@ -12,6 +12,7 @@ const Navbar = () => {
         <Link href="/">
           <a className="relative w-[140px] md:w-[160px] h-full">
             <Image
+              alt=""
               draggable="false"
               className="object-contain"
               src="/logo.svg"

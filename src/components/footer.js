@@ -8,6 +8,7 @@ const Footer = () => {
         <Link href="/">
           <a className="relative w-[140px] md:w-[160px] h-12 md:h-16">
             <Image
+              alt=""
               draggable="false"
               className="object-contain"
               src="/logo.svg"
@@ -16,11 +17,16 @@ const Footer = () => {
           </a>
         </Link>
         <div className="flex gap-4 flex-wrap justify-center">
-          <a target="_blank" href="https://github.com/jakubtrzpiot">
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href="https://github.com/jakubtrzpiot"
+          >
             GitHub
           </a>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://www.linkedin.com/in/jakub-trzpiot-702b65215/"
           >
             LinkedIn

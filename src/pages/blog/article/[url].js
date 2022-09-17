@@ -14,6 +14,7 @@ const Article = () => {
         <title>Blog | {title}</title>
       </Head>
       <Image
+        alt=""
         draggable="false"
         className="object-cover rounded-xl"
         width={2}

@@ -8,6 +8,7 @@ const ArticleCard = ({ url, title, image, content, date }) => {
       <a className="box-content lg:box-border flex w-full xl:w-1/2 flex-col gap-2 md:gap-4 py-4 px-3 -mx-3 rounded-xl active:bg-[#363636] md:hover:bg-[#363636] transition ">
         <div className="relative grow h-[240px] sm:h-[340px]">
           <Image
+            alt=""
             draggable="false"
             className="object-cover rounded-xl"
             src={image}
