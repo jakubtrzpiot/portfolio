@@ -1,12 +1,12 @@
 import Head from 'next/head';
 const About = () => {
   return (
-    <div className="container__global">
+    <>
       <Head>
         <title>About Me | trzpiodesign</title>
       </Head>
-      ABOUT
-    </div>
+      <div className="container flex">ABOUT</div>
+    </>
   );
 };
 

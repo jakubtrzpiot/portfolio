@@ -20,7 +20,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Navbar />
-      <main className="mt-[76px] md:mt-[108px] grow">{children}</main>
+      <main className="mt-20 grow pb-3">{children}</main>
       <Footer />
     </>
   );

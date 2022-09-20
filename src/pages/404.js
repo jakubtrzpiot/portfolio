@@ -3,18 +3,14 @@ import Head from 'next/head';
 
 const FourOhFour = () => {
   return (
-    <div className="container__global justify-center items-center">
+    <>
       <Head>
         <title>404 | Page Not Found</title>
       </Head>
-      <Image
-        alt=""
-        src="/404.svg"
-        height={200}
-        width={300}
-        layout="intrinsic"
-      />
-    </div>
+      <div className="container flex relative h-full max-w-[50%] justify-center items-center md:max-w-[25%]">
+        <Image alt="404" src="/404.svg" layout="fill" />
+      </div>
+    </>
   );
 };
 

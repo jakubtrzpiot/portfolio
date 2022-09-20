@@ -1,17 +1,18 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-const NavItem = ({ text, href }) => {
+const NavItem = ({ text, href, ...props }) => {
   const router = useRouter();
   const path = '/' + router.pathname.split('/')[1];
   return (
-    <a
-      className={`${
-        path === href ? 'active' : ''
-      } border-orange-600 md:transition-all md:hover:border-b-4`}
-    >
-      {text}
-    </a>
+    <Link href={href} passHref>
+      <a
+        className={`${path === href ? 'active' : ''} link_before w-fit`}
+        {...props}
+      >
+        {text}
+      </a>
+    </Link>
   );
 };
 const BurgerIcon = props => (

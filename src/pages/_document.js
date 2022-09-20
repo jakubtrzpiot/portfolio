@@ -2,7 +2,8 @@ import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html>
+    // make change theme slider class.toggle()
+    <Html className="dark">
       <Head />
       <body>
         <Main />

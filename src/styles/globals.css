@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,38 +7,21 @@
 html,
 body {
   height: calc(var(--vh, 100vh));
-  @apply m-0 p-0 outline-none bg-primary-dark text-stone-300;
+  @apply m-0 p-0 outline-none dark:bg-primaryDark text-stone-300;
   -webkit-tap-highlight-color: transparent;
 }
 #__next {
-  @apply h-full flex flex-col;
-}
-
-.container__global {
-  @apply h-full container flex px-3 py-3 mx-auto md:px-6;
-}
-.padding_y {
-  @apply py-0 md:py-3;
+  @apply h-full flex flex-col selection:bg-accent selection:text-footerDark;
 }
 
 h1 {
   @apply text-xl md:text-2xl;
 }
-
 a {
-  @apply text-lg cursor-pointer;
-}
-a:active {
-  @apply bg-none;
-}
-a.active {
-  @apply border-b-4;
+  @apply flex text-lg cursor-pointer;
 }
 
-nav > .active {
-  @apply bottom-0;
-}
-
+/*SCROLL*/
 ::-webkit-scrollbar {
   @apply w-1;
 }
@@ -45,7 +30,7 @@ nav > .active {
   @apply bg-accent rounded-full;
 }
 
-/*BURGER MENU*/
+/*BURGER ICON*/
 .line {
   @apply stroke-stone-300;
   fill: none;
@@ -79,4 +64,34 @@ nav > .active {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+
+/*MENU*/
+.menu_side {
+  @apply -right-[100vw] top-[76px] h-full dark:bg-primaryDark touch-none gap-4 py-5 px-3;
+}
+.menu {
+  @apply flex flex-col pl-10 py-8 w-[160px] fixed transition-all ease-out duration-500 -right-[160px] top-40 h-fit dark:bg-black touch-none gap-4 drop-shadow-lg rounded-l-xl;
+}
+.menu_bottom {
+  @apply h-fit -bottom-[244px] left-0 right-0 gap-4 p-5 rounded-t-2xl dark:bg-footerDark transition-all duration-300;
+}
+
+nav > .active.menu_side,
+nav > .active.menu {
+  @apply right-0;
+}
+nav > .active.menu_bottom {
+  @apply bottom-0;
+}
+
+nav a.active {
+  @apply before:w-full;
+}
+
+/*EFFECTS*/
+.link_before {
+  @apply relative
+        before:w-0 before:h-0.5 before:absolute before:bottom-0 before:right-0 before:bg-accent before:transition-all before:duration-500 before:rounded-full
+        md:hover:before:w-full md:hover:before:left-0 md:hover:before:bg-lightAccent active:before:w-full active:before:left-0 active:before:bg-lightAccent;
 }

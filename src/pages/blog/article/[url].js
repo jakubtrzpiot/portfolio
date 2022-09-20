@@ -1,30 +1,42 @@
 import { useRouter } from 'next/router';
 import { articles } from '../../../data';
 import Head from 'next/head';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const Article = () => {
   const router = useRouter();
   const { url } = router.query;
-  const { title, image, content } = articles.find(obj => obj.url === url);
+  const { title, image, content, date } = articles.find(obj => obj.url === url);
 
   return (
-    <div className="container__global gap-2 md:gap-4 flex-col">
+    <>
       <Head>
         <title>{`Blog | ${title}`}</title>
       </Head>
-      <Image
-        alt=""
-        draggable="false"
-        className="object-cover rounded-xl"
-        width={2}
-        height={1}
-        src={image}
-        layout="responsive"
-      />
-      <h1>{title}</h1>
-      <p>{content}</p>
-    </div>
+      <div className="container flex relative pt-6 gap-3 flex-col md:pt-16 md:gap-6 ">
+        <Link href="/blog" passHref>
+          {/* dodac anchory na poszczegolne posty */}
+          <a className="md:hover:text-accent transition text-xl">Back</a>
+        </Link>
+        <article>
+          <Image
+            alt=""
+            draggable="false"
+            className="object-cover rounded-xl"
+            width={5}
+            height={3}
+            src={image}
+            layout="responsive"
+          />
+          <h1 className="pt-2 md:pt-4">{title}</h1>
+          <p className="text-accent text-sm font-semibold pt-1 md:pt-2">
+            {date}
+          </p>
+          <div className="flex pt-4">{content}</div>
+        </article>
+      </div>
+    </>
   );
 };
 
