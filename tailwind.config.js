@@ -22,7 +22,7 @@ module.exports = {
         footerDark: '#191919',
         active: '#363636',
         accent: '#fe633d',
-        lightAccent: '#F99E89',
+        accentLight: '#F99E89',
       },
     },
   },

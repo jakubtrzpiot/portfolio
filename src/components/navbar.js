@@ -1,9 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '/public/logo.svg';
+import logo from '/public/assets/logo.svg';
 import { useState } from 'react';
 import { NavItem, BurgerIcon } from './navItem';
-import { links } from '../data';
+
+const links = [
+  { text: 'Home', href: '/' },
+  { text: 'About Me', href: '/about' },
+  { text: 'Blog', href: '/blog' },
+  { text: 'Projects', href: '/projects' },
+  { text: 'Contact', href: '/contact' },
+];
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);

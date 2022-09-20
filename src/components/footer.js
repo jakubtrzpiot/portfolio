@@ -1,7 +1,7 @@
 import Image from 'next/image';
-import github from '/public/github.svg';
-import linkedin from '/public/linkedin.svg';
-import logo from '/public/logo.svg';
+import github from '/public/assets/github.svg';
+import linkedin from '/public/assets/linkedin.svg';
+import logo from '/public/assets/logo.svg';
 
 const Footer = () => {
   return (

@@ -1,20 +1,19 @@
 import { useRouter } from 'next/router';
-import { articles } from '../../../data';
 import Head from 'next/head';
 import Link from 'next/link';
 import Image from 'next/image';
 
 const Article = () => {
   const router = useRouter();
-  const { url } = router.query;
-  const { title, image, content, date } = articles.find(obj => obj.url === url);
+  const { slug } = router.query;
+  const { title, image, content, date } = '';
 
   return (
     <>
       <Head>
         <title>{`Blog | ${title}`}</title>
       </Head>
-      <div className="container flex relative pt-6 gap-3 flex-col md:pt-16 md:gap-6 ">
+    <div className="container flex relative pt-6 gap-3 fZSAQWAQWAQWaqwaqw WA Q A! QAW Zlex-col md:pt-16 md:gap-6 ">
         <Link href="/blog" passHref>
           {/* dodac anchory na poszczegolne posty */}
           <a className="md:hover:text-accent transition text-xl">Back</a>

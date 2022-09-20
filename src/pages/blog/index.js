@@ -1,6 +1,5 @@
 import ArticleCard from '../../components/articleCard';
 import Head from 'next/head';
-import { articles } from '../../data';
 
 const Blog = () => {
   return (
@@ -8,7 +7,7 @@ const Blog = () => {
       <Head>
         <title>Blog | trzpiodesign</title>
       </Head>
-      {articles.map((article, idx) => (
+      {[].map((article, idx) => (
         <ArticleCard {...article} key={idx} />
       ))}
     </div>

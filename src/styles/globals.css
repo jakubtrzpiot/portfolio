@@ -93,5 +93,5 @@ nav a.active {
 .link_before {
   @apply relative
         before:w-0 before:h-0.5 before:absolute before:bottom-0 before:right-0 before:bg-accent before:transition-all before:duration-500 before:rounded-full
-        md:hover:before:w-full md:hover:before:left-0 md:hover:before:bg-lightAccent active:before:w-full active:before:left-0 active:before:bg-lightAccent;
+        md:hover:before:w-full md:hover:before:left-0 md:hover:before:bg-accentLight active:before:w-full active:before:left-0 active:before:bg-accentLight;
 }
