@@ -39,7 +39,7 @@ export const getStaticProps = async context => {
   const {
     params: { slug },
   } = context;
-  console.log(slug);
+
   const { data, content } = getArticleByFile('blog', slug);
   return {
     props: { data, content },
