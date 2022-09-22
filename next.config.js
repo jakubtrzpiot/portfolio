@@ -15,8 +15,13 @@ const withMDX = require('@next/mdx')({
 });
 
 module.exports = withMDX({
-  // Append the default value with md extensions
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
 });
-
 module.exports = nextConfig;
+module.exports = {
+  webpack: config => {
+    config.resolve.fallback = { fs: false, path: false };
+
+    return config;
+  },
+};
