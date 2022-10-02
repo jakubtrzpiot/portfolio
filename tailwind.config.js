@@ -9,24 +9,27 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '0.75rem',
+        DEFAULT: '1.25rem',
         md: '1.5rem',
+        lg: '2rem',
+        xl: '3rem',
+        '2xl': '4rem',
       },
     },
     fontFamily: {
-      sans: ['Figtree', 'sans-serif'],
+      sans: ['Inter', 'sans-serif'],
     },
     extend: {
       colors: {
-        dark: '#202020',
+        dark: '#212124',
         light: '#fff',
         textDark: '#343a40',
         textLight: '#f8f9fa',
         disabled: '#6c757d',
         active: '#303030',
-        activeLight: '#fce8e3',
-        accent: '#FE633C',
-        accentLight: '#FC8064',
+        activeLight: '#e5eeff',
+        accent: '#1E4593',
+        accentLight: '#458de0',
         accentLighter: '#F99E89',
       },
     },

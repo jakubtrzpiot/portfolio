@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Questrial&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,19 +6,15 @@
 
 html,
 body {
-  @apply m-0 p-0 outline-none dark:bg-dark bg-light dark:text-textLight text-textDark scroll-smooth selection:bg-accent;
+  @apply m-0 p-0 scroll-smooth outline-none dark:bg-dark bg-light dark:text-textLight text-textDark selection:bg-accent selection:text-textLight dark:selection:bg-accentLight;
   -webkit-tap-highlight-color: transparent;
 }
 #__next {
   min-height: var(--vh, 100vh);
   @apply h-full flex flex-col;
 }
-
-h1 {
-  @apply text-xl md:text-2xl;
-}
 a {
-  @apply flex text-lg cursor-pointer;
+  @apply flex text-3xl lg:text-xl font-bold lg:font-normal cursor-pointer;
 }
 
 /*SCROLL*/
@@ -27,7 +23,7 @@ a {
 }
 ::-webkit-scrollbar-thumb {
   /* Foreground */
-  @apply bg-accent rounded-full;
+  @apply bg-textDark dark:bg-textLight rounded-full;
 }
 
 /*BURGER ICON*/
@@ -68,20 +64,15 @@ a {
 
 /*MENU*/
 .menu {
-  @apply flex flex-col pl-10 mt-10 py-8 w-[150px] fixed transition-all ease-out duration-300 -right-[150px] top-20 h-fit dark:bg-black bg-white touch-none gap-4 drop-shadow-md rounded-l-xl;
+  @apply flex;
 }
 
-nav > .active.menu {
+nav > .active {
   @apply right-0;
-}
-
-nav a.active {
-  @apply before:w-full;
 }
 
 /*EFFECTS*/
 .link_before {
   @apply relative
-        before:w-0 before:h-0.5 before:absolute before:bottom-0 before:right-0 before:bg-accent before:transition-all before:duration-500 before:rounded-full
-        md:hover:before:w-full md:hover:before:left-0 active:before:w-full active:before:left-0;
+        before:w-0 before:h-0.5 before:absolute before:left-0 before:-bottom-1 before:bg-accent before:dark:bg-accentLight before:transition-all before:duration-500 before:rounded-full lg:before:hover:w-full;
 }

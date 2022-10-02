@@ -3,8 +3,8 @@ import Link from 'next/link';
 
 const ArticleCard = ({ slug, title, image, description, date }) => {
   return (
-    <Link href={slug} passHref>
-      <a className="box-content grow flex flex-col w-full -mx-3 px-3 py-5 rounded-xl transition dark:active:bg-active dark:md:hover:bg-active active:bg-activeLight md:hover:bg-activeLight md:box-border md:w-1/2">
+    <Link href={`blog/${slug}`} passHref>
+      <a className="box-content grow flex flex-col w-full -mx-5 px-5 md:-mx-3 md:px-3 py-5 rounded-xl transition dark:active:bg-active dark:md:hover:bg-active active:bg-activeLight md:hover:bg-activeLight md:box-border md:w-1/2">
         <Image
           alt={image}
           draggable="false"
@@ -14,9 +14,15 @@ const ArticleCard = ({ slug, title, image, description, date }) => {
           width={5}
           layout="responsive"
         />
-        <h1 className="pt-2 md:truncate md:pt-4">{title}</h1>
-        <p className="text-accent text-sm font-semibold pt-1 md:pt-2">{date}</p>
-        <div className="hidden md:flex pt-4">{description}</div>
+        <h1 className="text-2xl md:text-3xl font-bold mt-2 md:mt-4 md:truncate">
+          {title}
+        </h1>
+        <p className="hidden dark:text-stone-200 text-stone-700 text-base leading-7 lg:flex mt-6">
+          {description}
+        </p>
+        <p className="text-accent dark:text-accentLight text-sm font-semibold mt-2 md:mt-6">
+          {date}
+        </p>
       </a>
     </Link>
   );

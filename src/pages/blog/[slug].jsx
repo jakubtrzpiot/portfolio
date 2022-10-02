@@ -1,4 +1,4 @@
-import { getParams, getArticleByFile } from '../api/articles';
+import { getParams, getArticleBySlug } from '../api/articles';
 import md from 'markdown-it';
 import Link from 'next/link';
 import Head from 'next/head';
@@ -10,11 +10,18 @@ const Article = ({ data: { title, date }, content }) => {
         <title>{`Blog | ${title}`}</title>
       </Head>
       <div className="container prose dark:prose-invert prose-sm md:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl relative pt-5">
-        <Link href="/blog" passHref>
-          <a className="md:hover:text-accent w-fit transition">Back</a>
-        </Link>
-        <h1 className="pt-2 md:pt-4">{title}</h1>
-        <p className="text-accent text-sm font-semibold">{date}</p>
+        <div className="flex justify-between items-center">
+          <Link href="/blog" passHref>
+            <p className="hidden md:flex md:hover:text-accent dark:text-accentLight w-fit transition cursor-pointer">
+              Back
+            </p>
+          </Link>
+          <p className="text-accent dark:text-accentLight text-sm font-semibold pt-2 md:pt-0">
+            {date}
+          </p>
+        </div>
+        <h1 className="">{title}</h1>
+
         <div
           className="pt-4"
           dangerouslySetInnerHTML={{ __html: md().render(content) }}
@@ -25,7 +32,7 @@ const Article = ({ data: { title, date }, content }) => {
 };
 
 export const getStaticPaths = async () => {
-  const paramsList = getParams('blog');
+  const paramsList = getParams();
   const params = paramsList.map(slug => ({
     params: { slug: slug },
   }));
@@ -40,7 +47,7 @@ export const getStaticProps = async context => {
     params: { slug },
   } = context;
 
-  const { data, content } = getArticleByFile('blog', slug);
+  const { data, content } = getArticleBySlug(slug);
   return {
     props: { data, content },
   };
