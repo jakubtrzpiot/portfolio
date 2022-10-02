@@ -17,7 +17,7 @@ const Home = () => {
                 Full Stack Developer
               </h3>
               <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 lg:mb-10">
-                Hi, I'm Kuba Trzpiot
+                {`Hi, I'm Kuba Trzpiot`}
               </h1>
               <p className="text-base md:text-xl leading-8 md:leading-9 text-disabled dark:text-[#aaa] mb-8 lg:mb-12">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
@@ -28,6 +28,7 @@ const Home = () => {
                 <button className="bg-accent dark:bg-[#3c7ac1] px-12 lg:px-14 py-5 text-white rounded-xl">
                   Hire Me!
                 </button>
+
                 <Link href="/#contact" scroll={false}>
                   <button className="bg-accent/10 dark:bg-accentLight/20 text-accent dark:text-white  px-8 py-5 rounded-xl">
                     Get in Touch
@@ -41,6 +42,7 @@ const Home = () => {
                 width={512}
                 height={619}
                 layout="intrinsic"
+                alt="robot"
               />
             </div>
           </div>
