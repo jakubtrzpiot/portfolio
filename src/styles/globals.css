@@ -4,6 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
 html,
 body {
   @apply m-0 p-0 scroll-smooth outline-none dark:bg-dark bg-light dark:text-textLight text-textDark selection:bg-accent selection:text-textLight dark:selection:bg-accentLight;
@@ -14,7 +17,7 @@ body {
   @apply h-full flex flex-col;
 }
 a {
-  @apply flex text-3xl lg:text-xl font-bold lg:font-normal cursor-pointer;
+  @apply flex text-3xl lg:text-lg font-bold lg:font-normal cursor-pointer;
 }
 
 /*SCROLL*/
@@ -63,10 +66,6 @@ a {
 }
 
 /*MENU*/
-.menu {
-  @apply flex;
-}
-
 nav > .active {
   @apply right-0;
 }

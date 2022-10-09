@@ -1,4 +1,4 @@
-const Contact = props => {
+const ContactForm = props => {
   return (
     <div className="lg:px-[20%] pb-20" {...props}>
       <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">
@@ -64,4 +64,4 @@ const Contact = props => {
   );
 };
 
-export default Contact;
+export default ContactForm;

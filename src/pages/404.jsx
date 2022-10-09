@@ -14,17 +14,13 @@ const fof = (
   </svg>
 );
 
-const FourOhFour = () => {
-  return (
-    <>
-      <Head>
-        <title>404 | Page Not Found</title>
-      </Head>
-      <div className="container flex flex-col justify-center items-center">
-        {fof}
-      </div>
-    </>
-  );
-};
+const FourOhFour = () => (
+  <>
+    <Head>
+      <title>404 | Page Not Found</title>
+    </Head>
+    <div className="container flex justify-center py-[25%]">{fof}</div>
+  </>
+);
 
 export default FourOhFour;
