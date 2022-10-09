@@ -1,6 +1,10 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+
 import HomeSection from '../components/organisms/HomeSection';
+import AboutSection from '../components/organisms/AboutSection';
+import ProjectSection from '../components/organisms/ProjectsSection';
+import ContactSection from '../components/organisms/ContactSection';
 
 const Home = () => {
   const router = useRouter();
@@ -18,6 +22,9 @@ const Home = () => {
       </Head>
       <div className="container">
         <HomeSection />
+        <AboutSection />
+        <ProjectSection />
+        <ContactSection />
       </div>
     </>
   );

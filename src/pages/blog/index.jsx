@@ -7,8 +7,10 @@ const Blog = ({ articles }) => (
     <Head>
       <title>Blog | trzpio.dev</title>
     </Head>
-    <div className="container mt-12 lg:mt-20">
-      <h1 className="text-5xl mb-6 lg:mb-10">Blog</h1>
+    <div className="container mt-10 lg:mt-20">
+      <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 lg:mb-10">
+        Blog
+      </h1>
       <div className="flex flex-wrap justify-center md:gap-x-6">
         {articles && articles.length ? (
           articles.map(({ slug, data: article }, idx) => (
