@@ -2,24 +2,40 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import ThemeToggle from '../atoms/ThemeToggle';
 import HamburgerMenu from '../atoms/HamburgerMenu';
+import BackToTopButton from '../atoms/BackToTopButton';
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
+  const [hideNav, setHideNav] = useState(false);
+
   useEffect(() => {
-    window.onresize = () => {
-      console.log('resize');
-      if (window.innerWidth > 1024) {
+    let lastPos = window.scrollY;
+    window.addEventListener('scroll', () => {
+      if (window.scrollY - lastPos >= 50) {
+        lastPos = window.scrollY;
+        setHideNav(true);
+      } else if (lastPos - window.scrollY >= 50) {
+        lastPos = window.scrollY;
+        setHideNav(false);
+      }
+    });
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1023) {
         setNavActive(false);
       }
-    };
+    });
   }, []);
   return (
-    <header className="fixed z-[100] top-0 w-full dark:bg-dark bg-light py-5 lg:py-4">
+    <header
+      className={`${
+        !navActive && hideNav ? '-top-20' : 'top-0'
+      } fixed z-[100] w-full dark:bg-dark bg-light py-6 lg:py-4`}
+    >
       <nav className="container flex items-center justify-between">
         <div className="flex items-center gap-3 lg:gap-6">
           <Link href="/" passHref>
             <a
-              className="text-2xl font-medium"
+              className="text-xl lg:text-[22px] font-medium"
               onClick={() => setNavActive(false)}
             >
               trzpio.
@@ -34,7 +50,7 @@ const Navbar = () => {
         <menu
           className={`${
             navActive ? 'active' : ''
-          } top-20 py-10 w-full h-full fixed -right-full touch-none dark:bg-dark bg-light lg:m-0 lg:static lg:h-fit lg:w-fit lg:dark:bg-dark lg:bg-light lg:p-0`}
+          } z-50 top-20 py-10 w-full h-full fixed -right-full touch-none dark:bg-dark bg-light lg:m-0 lg:static lg:h-fit lg:w-fit lg:dark:bg-dark lg:bg-light lg:p-0`}
         >
           <div
             className={`flex flex-col items-end gap-6 lg:gap-3 lg:flex-row lg:items-center`}
@@ -83,6 +99,7 @@ const Navbar = () => {
           </div>
         </menu>
       </nav>
+      <BackToTopButton />
     </header>
   );
 };

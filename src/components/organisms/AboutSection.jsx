@@ -9,8 +9,7 @@ const AboutSection = () => {
       <p className="text-base md:text-xl leading-8 md:leading-9 text-disabled dark:text-[#aaa] mb-10 lg:mb-12">
         I am a student aspiring to be a full stack web developer with a passion
         for learning and building new things. I have experience with many
-        different technologies and frameworks. I am currently polishing my
-        programming skills and looking for new job opportunities.
+        different technologies and frameworks.
       </p>
       <div className="flex lg:hidden relative w-full h-full">
         <Image src="/assets/socials.svg" layout="fill" alt="socials" />

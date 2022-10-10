@@ -4,7 +4,7 @@ import Footer from './organisms/Footer';
 const Layout = ({ children }) => (
   <>
     <Navbar />
-    <main className="grow mt-20 pb-4">{children}</main>
+    <main className="grow mt-20 pb-3">{children}</main>
     <Footer />
   </>
 );

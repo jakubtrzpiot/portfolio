@@ -1,6 +1,6 @@
 const HamburgerMenu = props => (
   <button {...props}>
-    <svg width="40" height="40" viewBox="0 0 100 100">
+    <svg width="32" height="32" viewBox="0 0 100 100">
       <path
         className="line line1"
         strokeLinecap="round"
@@ -16,4 +16,4 @@ const HamburgerMenu = props => (
   </button>
 );
 
-export default HamburgerMenu
+export default HamburgerMenu;

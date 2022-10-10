@@ -12,9 +12,7 @@ const Article = ({ data: { title, date }, content }) => {
       <div className="container dark:prose-invert prose prose-sm md:prose lg:prose-lg lg:max-w-screen-md xl:max-w-screen-lg relative pt-5">
         <div className="flex justify-between items-center">
           <Link href="/blog" passHref>
-            <p className="hidden md:flex md:hover:text-accent dark:text-accentLight w-fit transition cursor-pointer">
-              Back
-            </p>
+            <a className="hidden md:flex w-fit link_before -m-5">Back</a>
           </Link>
           <p className="text-accent dark:text-accentLight text-sm font-semibold pt-2 md:pt-0">
             {date}

@@ -13,10 +13,10 @@ const MyApp = ({ Component, pageProps }) => {
   useEffect(() => {
     setHeight();
     let doit;
-    window.onresize = () => {
+    window.addEventListener('resize', () => {
       clearTimeout(doit);
       doit = setTimeout(setHeight, 200);
-    };
+    });
   }, []);
   return (
     <Layout>

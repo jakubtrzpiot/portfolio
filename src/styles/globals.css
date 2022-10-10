@@ -68,8 +68,11 @@ a {
     @apply container;
   }
 }
+header {
+  transition: top 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
 menu {
-  transition: right 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 nav > .active {
   @apply right-0;
