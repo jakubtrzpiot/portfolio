@@ -1,10 +1,18 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ThemeToggle from '../atoms/ThemeToggle';
 import HamburgerMenu from '../atoms/HamburgerMenu';
 
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
+  useEffect(() => {
+    window.onresize = () => {
+      console.log('resize');
+      if (window.innerWidth > 1024) {
+        setNavActive(false);
+      }
+    };
+  }, []);
   return (
     <header className="fixed z-[100] top-0 w-full dark:bg-dark bg-light py-5 lg:py-4">
       <nav className="container flex items-center justify-between">
@@ -18,7 +26,6 @@ const Navbar = () => {
               <span className="text-accent dark:text-accentLight">dev</span>
             </a>
           </Link>
-          <ThemeToggle />
         </div>
         <HamburgerMenu
           className={`${navActive ? 'opened' : ''} lg:hidden cursor-pointer`}
@@ -27,12 +34,10 @@ const Navbar = () => {
         <menu
           className={`${
             navActive ? 'active' : ''
-          } transition-all duration-300 top-20 py-10 w-full h-full fixed -right-full touch-none dark:bg-dark bg-light lg:m-0 lg:static lg:h-fit lg:w-fit lg:dark:bg-dark lg:bg-light lg:p-0`}
+          } top-20 py-10 w-full h-full fixed -right-full touch-none dark:bg-dark bg-light lg:m-0 lg:static lg:h-fit lg:w-fit lg:dark:bg-dark lg:bg-light lg:p-0`}
         >
           <div
-            className={`${
-              navActive ? 'container' : ''
-            } flex flex-col items-end gap-6 lg:flex-row lg:items-center lg:gap-8 xl:gap-10`}
+            className={`flex flex-col items-end gap-6 lg:gap-3 lg:flex-row lg:items-center`}
           >
             <Link href="/" passHref>
               <a
@@ -69,11 +74,12 @@ const Navbar = () => {
             <Link href="/#contact" passHref scroll={false}>
               <a
                 onClick={() => setNavActive(false)}
-                className="w-fit lg:text-white lg:py-2.5 lg:px-5 lg:bg-accent  lg:dark:bg-accentLight/80 lg:rounded-xl"
+                className="w-fit hover:lg:scale-105 lg:transition-all dark:text-accentLight text-accent lg:dark:text-white lg:text-white lg:py-3 lg:px-5 lg:bg-accent  lg:dark:bg-accentLight/80 lg:rounded-xl"
               >
                 Contact
               </a>
             </Link>
+            <ThemeToggle className="flex lg:hidden" />
           </div>
         </menu>
       </nav>

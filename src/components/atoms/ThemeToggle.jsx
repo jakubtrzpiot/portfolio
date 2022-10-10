@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ ...props }) => {
   const setTheme = () => {
     if ('theme' in localStorage) {
       localStorage.theme === 'dark'
@@ -14,6 +14,7 @@ const ThemeToggle = () => {
       localStorage.theme = 'light';
     }
   };
+
   useEffect(() => {
     setTheme();
     const toggle = document.getElementById('dark-mode-toggle');
@@ -30,7 +31,7 @@ const ThemeToggle = () => {
         document.documentElement.classList.add('dark');
   };
   return (
-    <div className="flex h-fit w-fit">
+    <div className="flex h-fit w-fit" {...props}>
       <label
         htmlFor="dark-mode-toggle"
         className="inline-flex relative items-center cursor-pointer"

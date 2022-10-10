@@ -4,9 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 html,
 body {
   @apply m-0 p-0 scroll-smooth outline-none dark:bg-dark bg-light dark:text-textLight text-textDark selection:bg-accent selection:text-textLight dark:selection:bg-accentLight;
@@ -17,12 +14,12 @@ body {
   @apply h-full flex flex-col;
 }
 a {
-  @apply flex text-3xl lg:text-lg font-bold lg:font-normal cursor-pointer;
+  @apply flex text-3xl lg:text-base font-medium cursor-pointer;
 }
 
 /*SCROLL*/
 ::-webkit-scrollbar {
-  @apply dark:bg-active bg-activeLight w-1;
+  @apply dark:bg-active bg-activeLight w-1 h-0;
 }
 ::-webkit-scrollbar-thumb {
   /* Foreground */
@@ -34,8 +31,8 @@ a {
   @apply stroke-accent dark:stroke-textLight;
   fill: none;
   stroke-width: 6;
-  transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: stroke-dasharray 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .line1 {
   stroke-dasharray: 60 207;
@@ -66,12 +63,20 @@ a {
 }
 
 /*MENU*/
+@media only screen and (max-width: 1023px) {
+  menu > div {
+    @apply container;
+  }
+}
+menu {
+  transition: right 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
 nav > .active {
   @apply right-0;
 }
 
 /*EFFECTS*/
 .link_before {
-  @apply relative
-        before:w-0 before:h-0.5 before:absolute before:left-0 before:-bottom-1 before:bg-accent before:dark:bg-accentLight before:transition-all before:duration-500 before:rounded-full lg:before:hover:w-full;
+  @apply relative z-50 lg:px-5 lg:py-2.5
+  before:absolute before:flex before:self-center before:-z-10 before:left-0 before:w-0 before:h-full before:bg-accent/20 before:dark:bg-accentLight/20 before:transition-all before:duration-300 lg:before:hover:w-full  before:rounded-xl before:opacity-0 lg:before:hover:opacity-100;
 }

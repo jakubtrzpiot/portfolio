@@ -13,7 +13,6 @@ module.exports = {
         md: '1.5rem',
         lg: '2rem',
         xl: '3rem',
-        '2xl': '4rem',
       },
     },
     fontFamily: {

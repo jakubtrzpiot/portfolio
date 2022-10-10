@@ -6,7 +6,7 @@
   date: September 28, 2022
 ---
 
-### Static websites are as old as the web itself. But the rise of JavaScript has opened the door to make those static sites more dynamic.
+## Static websites are as old as the web itself. But the rise of JavaScript has opened the door to make those static sites more dynamic.
 
 While that can include building an HTML file by hand, how can we leverage static generation to build apps with modern tools?
 

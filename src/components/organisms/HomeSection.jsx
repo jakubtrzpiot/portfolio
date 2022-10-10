@@ -12,18 +12,17 @@ const HomeSection = () => {
           {`Hi, I'm Kuba Trzpiot`}
         </h1>
         <p className="text-base md:text-xl leading-8 md:leading-9 text-disabled dark:text-[#aaa] mb-8 lg:mb-12">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-          obcaecati ipsa rerum quia quo excepturi dolorum. Saepe obcaecati ipsa
-          rerum quia quo excepturi dolorum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio
+          dolor enim sed id, nobis assumenda odit totam cum numquam ratione!
         </p>
         <div className="flex gap-4 justify-between sm:justify-start">
           <Link href="/#contact" scroll={false}>
-            <button className="w-full sm:w-fit bg-accent dark:bg-accentLight/80 px-12 lg:px-14 py-5 text-white rounded-xl">
+            <button className="lg:hover:scale-105 transition-all w-full sm:w-fit bg-accent dark:bg-accentLight/80 sm:px-12 lg:px-14 py-5 text-white rounded-xl">
               Hire Me!
             </button>
           </Link>
           <Link href="/#contact" scroll={false}>
-            <button className="w-full sm:w-fit bg-accent/10 dark:bg-accentLight/20 text-accent dark:text-white px-6 py-5 rounded-xl">
+            <button className="lg:hover:scale-105 transition-all w-full sm:w-fit bg-accent/10 dark:bg-accentLight/20 text-accent dark:text-white px-6 py-5 rounded-xl">
               Get in Touch
             </button>
           </Link>

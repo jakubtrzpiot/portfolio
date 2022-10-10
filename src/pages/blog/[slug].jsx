@@ -9,7 +9,7 @@ const Article = ({ data: { title, date }, content }) => {
       <Head>
         <title>{`Blog | ${title}`}</title>
       </Head>
-      <div className="container prose dark:prose-invert prose-sm md:prose lg:prose-lg xl:prose-xl 2xl:prose-2xl relative pt-5">
+      <div className="container dark:prose-invert prose prose-sm md:prose lg:prose-lg lg:max-w-screen-md xl:max-w-screen-lg relative pt-5">
         <div className="flex justify-between items-center">
           <Link href="/blog" passHref>
             <p className="hidden md:flex md:hover:text-accent dark:text-accentLight w-fit transition cursor-pointer">
