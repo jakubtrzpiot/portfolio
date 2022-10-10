@@ -2,7 +2,7 @@ import ContactForm from '../molecules/ContactForm';
 
 const ContactSection = () => {
   return (
-    <div id="contact" className="flex flex-col min-h-[var(--vh)] pt-[120px]">
+    <div id="contact" className="container flex flex-col pt-[80px]">
       <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 lg:mb-10">
         Contact Me
       </h1>
