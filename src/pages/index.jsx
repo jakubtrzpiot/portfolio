@@ -20,7 +20,7 @@ const Home = () => {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="container">
+      <div className="flex flex-col gap-40">
         <HomeSection />
         <AboutSection />
         <ProjectSection />

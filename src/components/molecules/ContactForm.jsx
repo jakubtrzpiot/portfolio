@@ -1,6 +1,6 @@
 const ContactForm = props => {
   return (
-    <form action="#" className="space-y-8 max-w-screen-md">
+    <form action="#" className="flex flex-col gap-6 max-w-screen-md">
       <div>
         <label htmlFor="email" className="flex mb-2 text-sm font-medium">
           Your email
@@ -38,7 +38,7 @@ const ContactForm = props => {
       </div>
       <button
         type="submit"
-        className="py-3 px-5 text-sm font-medium text-center text-white rounded-xl sm:w-fit dark:bg-accentLight bg-accent lg:hover:scale-105 transition-all"
+        className="py-3 px-5 text-sm font-medium text-center text-white rounded-xl dark:bg-accentLight bg-accent lg:hover:scale-105 transition-all"
       >
         Send message
       </button>

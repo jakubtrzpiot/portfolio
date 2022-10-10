@@ -19,7 +19,7 @@ module.exports = {
     },
     extend: {
       colors: {
-        dark: '#212124',
+        dark: '#202023',
         light: '#fff',
         textDark: '#343a40',
         textLight: '#f8f9fa',
