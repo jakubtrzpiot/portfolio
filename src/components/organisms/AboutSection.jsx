@@ -13,7 +13,7 @@ const AboutSection = () => {
         programming skills and looking for new job opportunities.
       </p>
       <div className="flex lg:hidden relative w-full h-full">
-        <Image src="/assets/socials.svg" layout="fill" />
+        <Image src="/assets/socials.svg" layout="fill" alt="socials" />
       </div>
     </div>
   );

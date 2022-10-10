@@ -29,10 +29,10 @@ const HomeSection = () => {
         </div>
       </div>
       <div className="flex lg:hidden relative w-full h-full">
-        <Image src="/assets/mobile.svg" layout="fill" />
+        <Image src="/assets/mobile.svg" layout="fill" alt="mobile" />
       </div>
       <div className="hidden lg:flex relative w-1/2 mt-24">
-        <Image src="/assets/desktop.svg" layout="fill" />
+        <Image src="/assets/desktop.svg" layout="fill" alt="desktop" />
       </div>
     </div>
   );

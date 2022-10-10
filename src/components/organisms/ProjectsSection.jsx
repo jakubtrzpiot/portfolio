@@ -7,8 +7,8 @@ const ProjectSection = () => {
         My Projects
       </h1>
       <p className="text-base md:text-xl leading-8 md:leading-9 text-disabled dark:text-[#aaa] mb-8 lg:mb-12">
-        Here are some of my projects. I'm currently working on a few more, so
-        check back soon!
+        {`Here are some of my projects. I'm currently working on a few more, so
+        check back soon!`}
       </p>
       <div className="flex grow items-center">
         <div className="flex flex-row gap-4 overflow-x-scroll">
