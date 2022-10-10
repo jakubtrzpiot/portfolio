@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const AboutSection = () => {
   return (
-    <div id="about" className="flex flex-col h-[100vh] pt-[120px] pb-10">
+    <div id="about" className="flex flex-col h-[var(--vh)] pt-[120px] pb-10">
       <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 lg:mb-10">
         About Me
       </h1>
