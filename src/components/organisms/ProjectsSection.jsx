@@ -2,7 +2,10 @@ import ProjectCard from '../molecules/ProjectCard';
 
 const ProjectSection = () => {
   return (
-    <div id="projects" className="flex flex-col min-h-[100vh] pt-[120px] pb-10">
+    <div
+      id="projects"
+      className="flex flex-col min-h-[var(--vh)] pt-[120px] pb-10"
+    >
       <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 lg:mb-10">
         My Projects
       </h1>

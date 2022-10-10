@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const HomeSection = () => {
   return (
-    <div className="flex flex-col lg:flex-row h-[calc(100vh-80px)] lg:h-fit py-10 gap-10">
+    <div className="flex flex-col lg:flex-row h-[calc(var(--vh)-80px)] lg:h-fit py-10 gap-10">
       <div className="lg:w-1/2 lg:mt-24 h-fit">
         <h3 className="mb-4 text-base md:text-lg xl:text-xl font-bold text-accent dark:text-accentLight">
           Full Stack Developer

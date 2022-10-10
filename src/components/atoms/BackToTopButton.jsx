@@ -25,7 +25,7 @@ const BackToTopButton = () => {
     <svg
       className={`${
         isVisible ? 'scale-100' : 'scale-0'
-      } dark:fill-light fill-accent transition-all duration-300 w-10 h-10 fixed bottom-10 right-10 cursor-pointer z-40`}
+      } dark:fill-light fill-accent transition-all duration-300 w-10 h-10 fixed bottom-20 right-10 cursor-pointer z-40`}
       onClick={scrollToTop}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
