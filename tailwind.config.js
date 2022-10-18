@@ -9,19 +9,16 @@ module.exports = {
     container: {
       center: true,
       padding: {
-        DEFAULT: '1.5rem',
-        lg: '2rem',
-        xl: '3rem',
+        DEFAULT: '1.25rem',
+        md: '2.5rem',
       },
     },
     fontFamily: {
-      sans: ['Inter', 'sans-serif'],
+      sans: ['Poppins', 'sans-serif'],
     },
     extend: {
       colors: {
-        dark: '#202023',
         light: '#fff',
-        textDark: '#343a40',
         textLight: '#f8f9fa',
         disabled: '#6c757d',
         active: '#303030',

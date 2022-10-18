@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 const fof = (
   <svg
-    className="dark:fill-textLight fill-textDark"
+    className="  fill-black"
     width="300"
     height="175"
     viewBox="0 0 210 122"
