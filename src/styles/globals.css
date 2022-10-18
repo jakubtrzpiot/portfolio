@@ -36,36 +36,36 @@ a {
 .line {
   @apply stroke-accent;
   fill: none;
-  stroke-width: 6;
+  stroke-width: 10;
   transition: stroke-dasharray 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .line1 {
   stroke-dasharray: 60 207;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .line2 {
   stroke-dasharray: 60 60;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .line3 {
   stroke-dasharray: 60 207;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .opened .line1 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .opened .line2 {
   stroke-dasharray: 1 60;
   stroke-dashoffset: -30;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .opened .line3 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 
 /*MENU*/
