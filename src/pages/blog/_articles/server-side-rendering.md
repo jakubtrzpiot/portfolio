@@ -2,7 +2,7 @@
   title: What is Rendering? How Server Side Rendering works in Next.js
   description:
     With server-side rendering, the HTML of the page is generated on a server for each request. The generated HTML, JSON data, and JavaScript instructions to make the page interactive are then sent to the client.
-  image : /blog/ssr/cover.png
+  image : /assets/blog/ssr/cover.png
   date: September 26, 2022
 ---
 

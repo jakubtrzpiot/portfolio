@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Questrial&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +6,7 @@
 
 html,
 body {
-  @apply m-0 p-0 scroll-smooth outline-none dark:bg-dark bg-light dark:text-textLight text-textDark selection:bg-accent selection:text-textLight dark:selection:bg-accentLight;
+  @apply m-0 p-0 scroll-smooth outline-none  bg-light  text-black selection:bg-accent selection:text-textLight;
   -webkit-tap-highlight-color: transparent;
 }
 #__next {
@@ -17,49 +17,55 @@ a {
   @apply flex text-3xl lg:text-base font-medium cursor-pointer;
 }
 
+@layer components {
+  .container {
+    @apply max-w-full xl:max-w-screen-xl;
+  }
+}
+
 /*SCROLL*/
 ::-webkit-scrollbar {
-  @apply dark:bg-active bg-activeLight w-1 h-0;
+  @apply bg-activeLight w-1 h-0;
 }
 ::-webkit-scrollbar-thumb {
   /* Foreground */
-  @apply bg-textDark dark:bg-textLight rounded-full;
+  @apply bg-black;
 }
 
 /*BURGER ICON*/
 .line {
-  @apply stroke-accent dark:stroke-textLight;
+  @apply stroke-accent;
   fill: none;
-  stroke-width: 6;
+  stroke-width: 10;
   transition: stroke-dasharray 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     stroke-dashoffset 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .line1 {
   stroke-dasharray: 60 207;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .line2 {
   stroke-dasharray: 60 60;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .line3 {
   stroke-dasharray: 60 207;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .opened .line1 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .opened .line2 {
   stroke-dasharray: 1 60;
   stroke-dashoffset: -30;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 .opened .line3 {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
-  stroke-width: 6;
+  stroke-width: 10;
 }
 
 /*MENU*/
@@ -80,6 +86,5 @@ nav > .active {
 
 /*EFFECTS*/
 .link_before {
-  @apply relative z-50 lg:px-5 lg:py-2.5
-  before:absolute before:flex before:self-center before:-z-10 before:left-0 before:w-0 before:h-full before:bg-accent/20 before:dark:bg-accentLight/20 before:transition-all before:duration-300 lg:before:hover:w-full  before:rounded-xl before:opacity-0 lg:before:hover:opacity-100;
+  @apply relative z-50 lg:px-5 lg:py-2.5 before:absolute before:flex before:self-center before:-z-10 before:left-0 before:w-0 before:h-full before:bg-activeLight before:transition-all before:duration-300 lg:before:hover:w-full before:opacity-0 lg:before:hover:opacity-100;
 }

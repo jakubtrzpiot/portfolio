@@ -1,11 +1,11 @@
-import { GitHub, LinkedIn } from '../atoms/Illustrations';
+import Icon from '../atoms/Icon';
+import Logo from '../atoms/Logo';
 
 const Footer = () => (
-  <footer className="dark:bg-dark bg-light">
-    <div className="border-t-2 dark:border-active border-activeLight container flex gap-6 flex-col items-center justify-between pt-14 pb-14 sm:pb-20 sm:flex-row">
-      <a className="text-2xl font-medium" href="https://trzpiodev.vercel.app/">
-        trzpio.
-        <span className="text-accent dark:text-accentLight">dev</span>
+  <footer className="  bg-light">
+    <div className="border-t-2   border-activeLight container flex gap-6 flex-col items-center justify-between pt-14 pb-14 sm:pb-20 sm:flex-row">
+      <a className="min-h-[40px]" href="https://trzpiodev.vercel.app/">
+        <Logo />
       </a>
       <div className="flex gap-6">
         <a
@@ -13,14 +13,14 @@ const Footer = () => (
           rel="noreferrer"
           href="https://github.com/jakubtrzpiot"
         >
-          <GitHub />
+          <Icon name="github" />
         </a>
         <a
           target="_blank"
           rel="noreferrer"
           href="https://www.linkedin.com/in/jakubtrzpiot"
         >
-          <LinkedIn />
+          <Icon name="linkedin" />
         </a>
       </div>
     </div>

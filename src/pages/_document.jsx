@@ -1,13 +1,16 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
-const Document = () => (
-  <Html>
-    <Head />
-    <body>
-      <Main />
-      <NextScript />
-    </body>
-  </Html>
-);
-
-export default Document;
+export default function Document() {
+  return (
+    <Html>
+      <Head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#90cdf4" />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
+    </Html>
+  );
+}
