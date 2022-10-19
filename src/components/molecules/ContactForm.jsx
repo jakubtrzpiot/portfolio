@@ -1,6 +1,6 @@
 const ContactForm = props => {
   return (
-    <form action="#" className="flex flex-col gap-6 max-w-screen-md">
+    <form action="#" className="flex flex-col gap-6">
       <div>
         <label htmlFor="email" className="flex mb-2 text-sm font-medium">
           Your email
@@ -8,7 +8,7 @@ const ContactForm = props => {
         <input
           type="email"
           id="email"
-          className="outline-accent   bg-gray-50 border border-gray-300 text-sm  block w-full p-2.5      "
+          className="contact__input"
           placeholder="email@address.com"
           required
         ></input>
@@ -20,8 +20,8 @@ const ContactForm = props => {
         <input
           type="text"
           id="subject"
-          className="outline-accent   bg-gray-50 border border-gray-300 text-sm  block w-full p-2.5      "
-          placeholder="Let me know how I can help you"
+          className="contact__input"
+          placeholder="Let me know how I can help You."
           required
         ></input>
       </div>
@@ -32,13 +32,13 @@ const ContactForm = props => {
         <textarea
           id="message"
           rows="6"
-          className="min-h-[42px] outline-accent   bg-gray-50 border border-gray-300 text-sm  block w-full p-2.5      "
+          className="min-h-[42px] contact__input"
           placeholder="Leave a comment..."
         ></textarea>
       </div>
       <button
         type="submit"
-        className="py-3 px-5 text-sm font-medium text-center text-white    bg-accent lg:hover:scale-105 transition-all"
+        className="py-3 px-5 lg:w-fit text-sm font-medium text-center text-white bg-primary lg:hover:scale-105 transition-all"
       >
         Send message
       </button>

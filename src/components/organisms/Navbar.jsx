@@ -30,7 +30,7 @@ const Navbar = () => {
     <header
       className={`${
         !navActive && hideNav ? '-top-20' : 'top-0'
-      } fixed z-[100] w-full   bg-light py-6 lg:py-4`}
+      } fixed z-[100] w-full bg-white py-6 lg:py-4`}
     >
       <nav className="container flex items-center justify-between">
         <div className="flex items-center gap-3 lg:gap-6">
@@ -50,7 +50,7 @@ const Navbar = () => {
         <menu
           className={`${
             navActive ? 'active' : ''
-          } z-50 top-20 py-10 w-full h-full fixed -right-full touch-none   bg-light lg:m-0 lg:static lg:h-fit lg:w-fit lg:  lg:bg-light lg:p-0`}
+          } z-50 top-20 py-10 w-full h-full fixed -right-full touch-none   bg-white lg:m-0 lg:static lg:h-fit lg:w-fit lg:p-0`}
         >
           <div
             className={`flex flex-col items-end gap-6 lg:gap-3 lg:flex-row lg:items-center`}
@@ -58,7 +58,7 @@ const Navbar = () => {
             <Link href="/" passHref>
               <a
                 onClick={() => setNavActive(false)}
-                className="link_before w-fit"
+                className="link link_before w-fit"
               >
                 Home
               </a>
@@ -66,7 +66,7 @@ const Navbar = () => {
             <Link href="/#about" passHref scroll={false}>
               <a
                 onClick={() => setNavActive(false)}
-                className="link_before w-fit"
+                className="link link_before w-fit"
               >
                 About Me
               </a>
@@ -74,7 +74,7 @@ const Navbar = () => {
             <Link href="/#projects" passHref scroll={false}>
               <a
                 onClick={() => setNavActive(false)}
-                className="link_before w-fit"
+                className="link link_before w-fit"
               >
                 Projects
               </a>
@@ -82,7 +82,7 @@ const Navbar = () => {
             <Link href="/blog" passHref>
               <a
                 onClick={() => setNavActive(false)}
-                className="link_before w-fit"
+                className="link link_before w-fit"
               >
                 Blog
               </a>
@@ -90,7 +90,7 @@ const Navbar = () => {
             <Link href="/#contact" passHref scroll={false}>
               <a
                 onClick={() => setNavActive(false)}
-                className="w-fit hover:lg:scale-105 lg:transition-all   text-accent lg:  lg:text-white lg:py-3 lg:px-5 lg:bg-accent  lg:  lg:"
+                className="link lg:ml-12 w-fit hover:lg:scale-105 lg:transition-all text-primary lg:text-white lg:py-3 lg:px-6 lg:bg-primary"
               >
                 Contact
               </a>

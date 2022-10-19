@@ -2,8 +2,8 @@ import Icon from '../atoms/Icon';
 import Logo from '../atoms/Logo';
 
 const Footer = () => (
-  <footer className="  bg-light">
-    <div className="border-t-2   border-activeLight container flex gap-6 flex-col items-center justify-between pt-14 pb-14 sm:pb-20 sm:flex-row">
+  <footer className="bg-white">
+    <div className="border-t-2   border-secondary container flex gap-6 flex-col items-center justify-between pt-14 pb-14 sm:pb-20 sm:flex-row">
       <a className="min-h-[40px]" href="https://trzpiodev.vercel.app/">
         <Logo />
       </a>

@@ -14,7 +14,7 @@ const Article = ({ data: { title, date }, content }) => {
           <Link href="/blog" passHref>
             <a className="hidden md:flex w-fit link_before -m-5">Back</a>
           </Link>
-          <p className="text-accent   text-sm font-semibold pt-2 md:pt-0">
+          <p className="text-primary   text-sm font-semibold pt-2 md:pt-0">
             {date}
           </p>
         </div>

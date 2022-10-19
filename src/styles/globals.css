@@ -6,15 +6,41 @@
 
 html,
 body {
-  @apply m-0 p-0 scroll-smooth outline-none  bg-light  text-black selection:bg-accent selection:text-textLight;
+  @apply m-0 p-0 scroll-smooth outline-none text-black selection:bg-primary selection:text-white;
   -webkit-tap-highlight-color: transparent;
 }
 #__next {
   min-height: 100vh;
   @apply h-full flex flex-col;
 }
+
 a {
-  @apply flex text-3xl lg:text-base font-medium cursor-pointer;
+  @apply flex;
+}
+
+.section {
+  @apply container pt-10 lg:pt-40 grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12;
+}
+.section__special {
+  @apply relative text-xs lg:text-base font-semibold text-primary before:absolute before:w-5 before:h-5 before:lg:w-7 before:lg:h-7 before:bg-secondary before:-z-10 before:bottom-0 before:-left-3 mb-1 lg:mb-2;
+}
+.section__header {
+  @apply flex gap-1 lg:gap-2 flex-col text-4xl lg:text-5xl font-semibold tracking-tight mb-6 lg:mb-10;
+}
+.section__text {
+  @apply text-base lg:text-lg leading-8 md:leading-9 text-disabled mb-6 lg:mb-10;
+}
+
+.contact__input {
+  @apply outline-primary  bg-gray-50 border border-gray-300 text-sm w-full p-2.5 text-disabled;
+}
+
+.list_triang {
+  @apply relative before:absolute before:w-1 before:h-1 before:bg-white before:left-0 before:top-0;
+}
+
+.link {
+  @apply text-3xl lg:text-base font-medium cursor-pointer;
 }
 
 @layer components {
@@ -25,16 +51,16 @@ a {
 
 /*SCROLL*/
 ::-webkit-scrollbar {
-  @apply bg-activeLight w-1 h-0;
+  @apply bg-secondary w-1;
 }
 ::-webkit-scrollbar-thumb {
   /* Foreground */
-  @apply bg-black;
+  @apply bg-primary;
 }
 
 /*BURGER ICON*/
 .line {
-  @apply stroke-accent;
+  @apply stroke-primary;
   fill: none;
   stroke-width: 10;
   transition: stroke-dasharray 0.4s cubic-bezier(0.4, 0, 0.2, 1),
@@ -86,5 +112,5 @@ nav > .active {
 
 /*EFFECTS*/
 .link_before {
-  @apply relative z-50 lg:px-5 lg:py-2.5 before:absolute before:flex before:self-center before:-z-10 before:left-0 before:w-0 before:h-full before:bg-activeLight before:transition-all before:duration-300 lg:before:hover:w-full before:opacity-0 lg:before:hover:opacity-100;
+  @apply relative z-50 lg:px-5 lg:py-2.5 before:absolute before:flex before:self-center before:-z-10 before:left-0 before:w-0 before:h-full before:bg-secondary before:transition-all before:duration-300 lg:before:hover:w-full before:opacity-0 lg:before:hover:opacity-100;
 }
