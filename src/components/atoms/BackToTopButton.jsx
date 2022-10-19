@@ -25,7 +25,7 @@ const BackToTopButton = () => {
     <button
       className={`${
         isVisible ? 'opacity-100' : 'opacity-0'
-      } transition-all flex fixed bottom-6 right-6 cursor-pointer bg-accent py-3 lg:py-2 px-4 items-center gap-2`}
+      } transition-all flex fixed bottom-6 right-6 cursor-pointer bg-primary py-3 lg:py-2 px-4 items-center gap-2`}
       onClick={scrollToTop}
     >
       <svg

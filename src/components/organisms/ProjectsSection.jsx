@@ -1,20 +1,18 @@
+import Card from '../atoms/Card';
+
 const ProjectSection = () => {
   return (
-    <div
-      id="projects"
-      className="container flex flex-col min-h-[100vh] pt-[80px] pb-10"
-    >
-      <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6 lg:mb-10">
-        My Projects
-      </h1>
-      <p className="text-base md:text-xl leading-8 md:leading-9 text-disabled  ">
-        {`Here are some of my projects. I'm currently working on a few more, so
-        check back soon!`}
-      </p>
-
-      <div className="flex grow mt-10 items-center">
-        <div className="flex flex-row gap-6 overflow-y-auto snap-mandatory snap-x  h-fit"></div>
+    <div id="projects" className="section">
+      <div className="col-span-full lg:col-start-4 lg:col-span-6">
+        <h1 className="section__header">Featured Projects</h1>
+        <p className="section__text">
+          Here are some of my projects. I am currently working on a few more, so
+          check back soon!
+        </p>
       </div>
+      <Card />
+      <Card />
+      <Card />
     </div>
   );
 };

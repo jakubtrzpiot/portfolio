@@ -18,14 +18,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        light: '#fff',
-        textLight: '#f8f9fa',
-        disabled: '#6c757d',
-        active: '#303030',
-        activeLight: '#e5eeff',
-        accent: '#1E4593',
-        accentLight: '#458de0',
-        accentLighter: '#F99E89',
+        primary: '#1E4593',
+        secondary: '#f2f6ff',
+        active: '#e5eeff',
+        disabled: '#707070',
       },
     },
   },
