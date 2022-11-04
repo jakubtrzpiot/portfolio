@@ -38,7 +38,7 @@ const ContactForm = props => {
       </div>
       <button
         type="submit"
-        className="py-3 px-5 lg:w-fit text-sm font-medium text-center text-white bg-primary lg:hover:scale-105 transition-all"
+        className="justify-items-end py-3 px-5 text-sm font-medium text-white bg-primary lg:hover:-translate-y-1 transition-all"
       >
         Send message
       </button>

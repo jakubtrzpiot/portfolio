@@ -9,12 +9,12 @@ const Article = ({ data: { title, date }, content }) => {
       <Head>
         <title>{`Blog | ${title}`}</title>
       </Head>
-      <div className="container   prose prose-sm md:prose lg:prose-lg lg:max-w-screen-md xl:max-w-screen-lg relative pt-5">
+      <div className="container prose prose-sm md:prose lg:prose-lg lg:max-w-screen-md xl:max-w-screen-lg relative pt-5">
         <div className="flex justify-between items-center">
           <Link href="/blog" passHref>
             <a className="hidden md:flex w-fit link_before -m-5">Back</a>
           </Link>
-          <p className="text-primary   text-sm font-semibold pt-2 md:pt-0">
+          <p className="text-primary text-sm font-semibold pt-2 md:pt-0">
             {date}
           </p>
         </div>
