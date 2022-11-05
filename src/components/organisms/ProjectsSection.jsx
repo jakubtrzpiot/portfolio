@@ -4,7 +4,7 @@ import Icon from '../atoms/Icon';
 const ProjectSection = () => {
   return (
     <div id="projects" className="section">
-      <div className="col-span-full lg:col-start-4 lg:col-span-6 mb-20 md:mb-40">
+      <div className="flex flex-col items-center col-span-full lg:col-start-4 lg:col-span-6 mb-20 md:mb-40">
         <h1 className="section__header">Featured Projects</h1>
         <p className="section__text">
           Here are some of my projects. I am currently working on a few more, so
@@ -17,7 +17,7 @@ const ProjectSection = () => {
           Portfolio website that I created to showcase my projects and write
           blog posts about my journey as a developer.
         </p>
-        <p className="section__text">
+        <p className="section__text section__tech">
           <span className="font-bold">Technologies used:</span> Next.js,
           Tailwind CSS, Framer Motion, React Markdown, Figma
         </p>
@@ -45,7 +45,7 @@ const ProjectSection = () => {
           Online shopping website in React with Redux and Firebase. It features
           a shopping cart, user authentication, and a payment system.
         </p>
-        <p className="section__text">
+        <p className="section__text section__tech">
           <span className="font-bold">Technologies used:</span> React, Redux,
           Framer Motion, Firebase, Stripe, Figma
         </p>
@@ -53,9 +53,9 @@ const ProjectSection = () => {
           href="https://github.com/jakubtrzpiot/react-curology-app"
           target="_blank"
           rel="noreferrer"
-          className="items-center md:text-lg gap-2 cursor-pointer"
+          className="items-center md:text-lg gap-2 cursor-pointer md:flex-row-reverse"
         >
-          <Icon name="github" /> Check it out on GitHub
+          Check it out on GitHub <Icon name="github" />
         </a>
       </div>
       <div className="row-start-5 col-span-full md:row-start-3 lg:col-start-8 lg:justify-self-end mb-20">
@@ -83,7 +83,7 @@ const ProjectSection = () => {
           to fetch weather data. It also uses Expo Location API to fetch users
           location.
         </p>
-        <p className="section__text">
+        <p className="section__text section__tech">
           <span className="font-bold">Technologies used:</span> React Native,
           Expo, Inline CSS, Figma, tommorow.io API, Expo Location API
         </p>
