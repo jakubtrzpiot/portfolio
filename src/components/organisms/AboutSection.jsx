@@ -1,13 +1,13 @@
 const AboutSection = () => {
   const techStack = [
     'HTML5',
-    'CSS',
+    'Node.js',
+    'CSS3',
+    'Next.js',
     'JavaScript',
     'React',
-    'Node.js',
-    'Next.js',
-
     'Python',
+    'React Native',
   ];
   return (
     <div id="about" className="section overflow-none">

@@ -33,7 +33,9 @@ a {
 .section__text {
   @apply text-base lg:text-lg leading-8 md:leading-9 text-disabled mb-6 lg:mb-10;
 }
-
+.section__tech {
+  @apply text-[#7e838c];
+}
 .contact__input {
   @apply outline-primary  bg-gray-50 border border-gray-300 text-sm w-full p-2.5 text-disabled;
 }
